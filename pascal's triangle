@@ -1,0 +1,28 @@
+# Pascal's Triangle
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int r,i,j,number;
+    cout << "Enter number of rows:";
+    cin>>r;
+    cout<<"\n";
+    for(i=0;i<r;i++)
+    {
+        number=1;
+        for(j=1;j<(r-i);j++)
+        {
+        cout<<" ";
+        }
+        for(int k=0;k<=i;k++)
+        {
+        cout<<" "<<number;
+        number=number*(i-k)/(k+1);
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    return 0;
+}
