@@ -1,0 +1,25 @@
+//counter to check students feedback on a scale of 1 to 5
+#include<iostream>
+using namespace std;
+
+int main()
+{
+int counter[6]={0,0,0,0,0,0}, response;
+cout<<"Enter your response";
+for(int i=1;i<=5;i++)
+{
+    cin>>response;
+    if(i<1||i>5)
+    {
+        cout<<"Invalid Response";
+    }
+    else
+        {
+            ++counter[response];
+        }
+}
+for(int i=1;i<=5;i++)
+{
+    cout<<i<<"  "<<counter[i]<<endl;
+}
+}
