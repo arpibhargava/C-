@@ -1,0 +1,53 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a[3][3], b[3][3], i, j, c[3][3];
+	cout<<"Enter elements of First matrix:";
+	for(i=0; i<3; i++)
+	{
+		for(j=0; j<3; j++)
+		{
+			cin>>a[i][j];
+		}
+	}
+	cout<<"Enter elements of Second matrix:";
+	for(i=0; i<3; i++)
+	{
+		for(j=0; j<3; j++)
+		{
+			cin>>b[i][j];
+		}
+	}
+
+	for(i=0; i<3; i++)
+	{
+		for(j=0; j<3; j++)
+		{
+			c[i][j]=a[i][j]+b[i][j];
+		}
+	}
+	cout<<"Matrix Multiplication is :\n";
+	if (a[j]==b[i])
+    {
+	for(i=0; i<3; i++)
+	{
+		for(j=0; j<3; j++)
+		{
+		    c[i][j]=0;
+		    for(int k=0;k<i;k++)
+            {
+                c[i][j]=a[i][k]*b[k][j];
+            }
+		}
+	}
+}
+for(i=0; i<3; i++)
+	{
+		for(j=0; j<3; j++)
+		{
+			cout<<c[i][j]<<" ";
+		}
+		cout<<endl;
+	}
+}
